@@ -11,6 +11,19 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { defineProps } from "vue";
+
+const props = defineProps({
+  income: {
+    type: Number,
+    required: true,
+  },
+  expenses: {
+    type: Number,
+    required: true,
+  },
+});
+</script>
 
 <style lang="css" scoped></style>

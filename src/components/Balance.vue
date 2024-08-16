@@ -1,6 +1,6 @@
 <template>
   <h4>Saldo</h4>
-  <h1 id="balance">{{ total }}€</h1>
+  <h1 id="balance">{{ total.toFixed(2) }}€</h1>
   <div></div>
 </template>
 
@@ -15,4 +15,4 @@ const props = defineProps({
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped></style>
