@@ -1,7 +1,17 @@
 <template>
-  <div>Mis Cuentas</div>
+  <Header />
 </template>
 
-<script setup></script>
+<script>
+  import Header from './components/Header.vue';
 
-<style lang="css" scoped></style>
+  export default {
+    components: {
+      Header,
+    },
+  };
+</script>
+
+<style lang="css" scoped>
+
+</style>
