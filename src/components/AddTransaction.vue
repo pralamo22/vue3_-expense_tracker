@@ -3,7 +3,7 @@
   <form id="form" @submit.prevent="onSubmit">
     <div class="form-control">
       <label for="text">Texto</label>
-      <input type="text" id="text" placeholder="Enter text..." v-model="text" />
+      <input type="text" id="text" v-model="text" placeholder="Enter text..." />
     </div>
     <div class="form-control">
       <label for="amount"
@@ -21,6 +21,15 @@
   </form>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+const text = ref("");
+const amount = ref("");
+
+const onSubmit = () => {
+  console.log(text.value, amount.value);
+};
+</script>
 
 <style lang="css" scoped></style>
