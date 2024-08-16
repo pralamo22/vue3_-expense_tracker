@@ -24,12 +24,21 @@
 </template>
 
 <script setup>
-const transactions = [
-  { id: 1, text: "Flower", amount: -19.99 },
-  { id: 1, text: "Salario", amount: 299.97 },
-  { id: 1, text: "Book", amount: -10 },
-  { id: 1, text: "Camara", amount: -150 },
-];
+import { defineProps } from "vue";
+
+const props = defineProps({
+  transactions: {
+    type: Array,
+    required: true,
+  },
+});
+
+// const transactions = [
+//   { id: 1, text: "Flower", amount: -19.99 },
+//   { id: 1, text: "Salario", amount: 299.97 },
+//   { id: 1, text: "Book", amount: -10 },
+//   { id: 1, text: "Camara", amount: -150 },
+// ];
 
 // Comentado el aspecto del código para el Options API. Ahora, con
 // setup, utilizamos el Composition API.
